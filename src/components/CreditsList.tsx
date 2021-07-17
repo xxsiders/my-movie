@@ -14,8 +14,9 @@ export default function CreditsList(props: any) {
         </View>
     }
 
-    return <FlatList showsHorizontalScrollIndicator={false} keyExtractor={item => item.id} contentContainerStyle={styles.container} horizontal data={props.data} renderItem={renderItem} />
-
+    return <View>
+        <FlatList showsHorizontalScrollIndicator={false} keyExtractor={item => item.id} contentContainerStyle={styles.container} horizontal data={props.data} renderItem={renderItem} />
+    </View>
 }
 
 const theme = () => {
@@ -23,8 +24,8 @@ const theme = () => {
     return StyleSheet.create({
         container: {
             paddingHorizontal: '5%',
-            marginBottom: 50,
-            marginTop: 10
+            marginTop: 10,
+            paddingBottom: 200
         },
         actorContainer: {
             alignItems: 'center',

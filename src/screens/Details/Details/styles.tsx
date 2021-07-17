@@ -32,7 +32,8 @@ const styles = () => {
             aspectRatio: 12 / 16,
             borderRadius: 10,
             alignSelf: 'center',
-            marginBottom: 12
+            marginBottom: 12,
+            minHeight: 250
         },
         vote: {
             color: colors.primary,
