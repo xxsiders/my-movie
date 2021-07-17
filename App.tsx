@@ -1,7 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
 import useCachedResources from './src/hooks/useCachedResources';
 import useColorScheme from './src/hooks/useColorScheme';
+import Navigation from './src/navigation';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -10,6 +10,6 @@ export default function App() {
   if (!isLoadingComplete) {
     return null;
   } else {
-    return <View />
+    return <Navigation colorScheme={colorScheme} />
   }
 }
