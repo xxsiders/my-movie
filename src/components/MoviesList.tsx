@@ -11,7 +11,7 @@ export default function MoviesList(props: any) {
 
     const renderItem = ({ item }: { item: Movie }) => {
         const relaeaseDate = new Date(item.release_date)
-        return <TouchableOpacity key={item.id} activeOpacity={.9} style={styles.card}>
+        return <TouchableOpacity onPress={() => props.navigation.navigate('Details', { item })} key={item.id} activeOpacity={.9} style={styles.card}>
             <View style={styles.block}>
                 <Image defaultSource={require('../assets/image/placeholder.png')} style={styles.image} source={{ uri: Configs.imageBaseUrl + item.poster_path }} />
                 <View style={styles.content}>
