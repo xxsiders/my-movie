@@ -5,6 +5,7 @@ export const Configs = {
         popular: 'popularity.desc',
         upcoming: 'primary_release_date.desc',
         best: 'vote_count.desc'
-    }
+    },
+    imageBaseUrl:'https://image.tmdb.org/t/p/w300/'
 }
 
