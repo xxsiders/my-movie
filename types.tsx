@@ -13,6 +13,11 @@ export type Categroy = {
   value: string
 }
 
+export type Genre = {
+  name: string
+  id: number
+}
+
 export type Movie = {
   id: number
   original_title: string
@@ -20,4 +25,5 @@ export type Movie = {
   vote_average: number
   poster_path: string
   genre_ids: Array<number>
+  genres: Array<Genre>
 }

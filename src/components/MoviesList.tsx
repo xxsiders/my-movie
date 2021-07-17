@@ -18,6 +18,11 @@ export default function MoviesList(props: any) {
                     <Text style={styles.title}>{item.original_title}</Text>
                     <Text style={styles.date}>{relaeaseDate.toDateString()}</Text>
                     <Text style={styles.vote}>{item.vote_average * 10}%</Text>
+                    <View style={styles.genreContainer}>
+                        {item.genres.map(item => <View style={styles.genre} key={item.id}>
+                            <Text style={styles.genreTitle}>{item.name}</Text>
+                        </View>)}
+                    </View>
                 </View>
             </View>
         </TouchableOpacity>
@@ -80,6 +85,22 @@ const theme = () => {
             position: 'absolute',
             right: 0,
             bottom: 2
+        },
+        genre: {
+            backgroundColor: colors.border,
+            borderRadius: 20,
+            paddingHorizontal: 6,
+            paddingVertical: 6,
+            margin: 2
+        },
+        genreTitle: {
+            fontFamily: Layout.fontFamily.InterMedium,
+            fontSize: Layout.fonts.h6,
+        },
+        genreContainer: {
+            flexWrap: 'wrap',
+            flexDirection: Layout.styles.flexDirection,
+            marginVertical: 4
         }
     })
 }

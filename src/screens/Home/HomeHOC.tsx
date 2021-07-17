@@ -4,7 +4,7 @@ import ListProvider from "../../providers/ListProvider";
 
 const HomeHOC = (Com: React.ComponentType<any>) => {
     const wrapper = (props: any) => {
-        const { fetchList, loading, data } = ListProvider()
+        const { fetchList, loading, data, } = ListProvider()
         const [currentCategory, setCurrentCategory] = useState(Configs.listFilter.upcoming)
 
         useEffect(() => {
