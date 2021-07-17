@@ -7,3 +7,8 @@ export type RootStackParamList = {
   Home: undefined;
   Details: undefined;
 };
+
+export type Categroy = {
+  name: string,
+  value: string
+}
